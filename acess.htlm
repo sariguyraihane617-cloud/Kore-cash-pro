@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accès à Vendeur Digital 360</title>
+  <meta name="description" content="Accédez à votre produit digital Vendeur Digital 360.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #1f2937;
+    }
+    .container {
+      width: 100%;
+      max-width: 520px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 40px 25px;
+      text-align: center;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+    }
+    .check {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: #16a34a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+    .welcome {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: #4b5563;
+    }
+    .product {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 25px;
+    }
+    .product h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+    .product p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+    .button {
+      display: block;
+      width: 100%;
+      padding: 17px 20px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    .button:hover {
+      background: #000000;
+      transform: translateY(-1px);
+    }
+    .info {
+      margin-top: 22px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #6b7280;
+    }
+    .footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .name {
+      font-weight: bold;
+      color: #374151;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="check">✓</div>
+    <h1>Paiement confirmé !</h1>
+    <p class="welcome">
+      Merci pour votre achat. Votre accès à
+      <strong>Vendeur Digital 360</strong>
+      est maintenant disponible.
+    </p>
+    <section class="product">
+      <h2>🚀 Vendeur Digital 360</h2>
+      <p>
+        Votre ressource digitale pour apprendre à lancer,
+        structurer et développer votre activité en ligne
+        de manière simple et pratique.
+      </p>
+    </section>
+    <!--
+      IMPORTANT :
+      Remplace le lien ci-dessous par le véritable lien
+      vers ton produit digital.
+    -->
+    <a
+      class="button"
+      href="LIEN-DE-TON-PRODUIT-ICI"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🔓 Accéder à mon produit
+    </a>
+    <p class="info">
+      Conservez cette page et votre lien d'accès.
+      Si vous rencontrez un problème avec votre accès,
+      contactez le vendeur.
+    </p>
+    <div class="footer">
+      Produit proposé par
+      <span class="name">SARIGUY Raihane</span>
+    </div>
+  </main>
+</body>
+</html>
