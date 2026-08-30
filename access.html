@@ -3,115 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accès à votre produit - Vendeur Digital 360</title>
+  <title>Votre accès - Vendeur Digital 360</title>
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      min-height: 100vh;
+      background: #f5f7fb;
+      color: #172033;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       padding: 20px;
-      color: white;
+      box-sizing: border-box;
     }
-    .container {
+
+    .box {
       width: 100%;
-      max-width: 500px;
+      max-width: 520px;
       background: white;
-      color: #111827;
       border-radius: 20px;
       padding: 35px 25px;
       text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.10);
     }
-    .icon {
+
+    .check {
       font-size: 55px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
+
     h1 {
+      margin: 10px 0;
       font-size: 28px;
-      margin-bottom: 15px;
-      color: #111827;
     }
+
     p {
-      font-size: 16px;
+      color: #5d6675;
       line-height: 1.6;
-      color: #4b5563;
-      margin-bottom: 25px;
+      font-size: 16px;
     }
-    .button {
-      display: block;
-      width: 100%;
-      padding: 16px;
-      margin: 12px 0;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: bold;
-      transition: 0.2s;
-    }
-    .button:hover {
-      transform: translateY(-2px);
-    }
-    .product {
-      background: #2563eb;
-      color: white;
-    }
-    .whatsapp {
+
+    .download {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 16px 25px;
       background: #16a34a;
       color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 17px;
     }
-    .notice {
-      background: #f3f4f6;
-      border-radius: 10px;
-      padding: 15px;
+
+    .download:hover {
+      background: #12813b;
+    }
+
+    .note {
       margin-top: 20px;
-      font-size: 14px;
-      color: #374151;
-    }
-    .footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #9ca3af;
+      font-size: 13px;
+      color: #7a8494;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="icon">🎉</div>
+
+  <div class="box">
+
+    <div class="check">🎉</div>
+
     <h1>Félicitations !</h1>
+
     <p>
       Votre paiement a été effectué avec succès.
-      Vous pouvez maintenant accéder à votre produit
-      <strong>Vendeur Digital 360</strong>.
+      <br><br>
+      Votre <strong>Vendeur Digital 360</strong> est maintenant disponible.
     </p>
-    <a
-      class="button product"
-      href="https://drive.google.com/"
-      target="_blank"
-    >
-      📥 ACCÉDER À MON PRODUIT
+
+    <a class="download" href="./Vendeur_Digital_360.pdf" target="_blank">
+      📘 ACCÉDER À MON GUIDE
     </a>
-    <a
-      class="button whatsapp"
-      href="https://wa.me/2290196688715"
-      target="_blank"
-    >
-      💬 BESOIN D'AIDE ? CONTACTER WHATSAPP
-    </a>
-    <div class="notice">
-      ⚠️ Conservez précieusement ce lien d'accès.
-      Il vous permettra de retrouver votre produit.
-    </div>
-    <div class="footer">
-      © 2026 Vendeur Digital 360 — Tous droits réservés.
-    </div>
+
+    <p class="note">
+      Cliquez sur le bouton ci-dessus pour ouvrir votre guide.
+    </p>
+
   </div>
+
 </body>
 </html>
