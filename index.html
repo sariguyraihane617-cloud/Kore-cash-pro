@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vendeur Digital 360 — Apprends à créer, vendre et développer ton activité digitale.">
+  <title>Vendeur Digital 360</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+    }
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(7,17,31,.95);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+    }
+    .logo span {
+      color: #25d366;
+    }
+    .nav-btn {
+      color: white;
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 9px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 75px 0 60px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(37,211,102,.12);
+      color: #25d366;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(38px, 8vw, 70px);
+      line-height: 1.05;
+      max-width: 900px;
+      margin: auto;
+      font-weight: 900;
+    }
+    h1 span {
+      color: #25d366;
+    }
+    .hero p {
+      max-width: 720px;
+      margin: 25px auto;
+      color: #b8c4d3;
+      font-size: 18px;
+    }
+    .cta {
+      display: inline-block;
+      background: #25d366;
+      color: #06110a;
+      font-weight: 800;
+      padding: 16px 28px;
+      border-radius: 12px;
+      margin-top: 12px;
+      font-size: 17px;
+      transition: .2s;
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+    }
+    .secondary {
+      display: inline-block;
+      color: white;
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 15px 25px;
+      border-radius: 12px;
+      margin: 12px 5px 0;
+    }
+    section {
+      padding: 65px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+    .section-text {
+      text-align: center;
+      color: #aeb9c8;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: #0d1a2a;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 28px;
+    }
+    .icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #aeb9c8;
+    }
+    .offer {
+      background: linear-gradient(135deg, #0d1f31, #0b1726);
+      border: 1px solid rgba(37,211,102,.2);
+      border-radius: 25px;
+      padding: 45px 25px;
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+    .offer h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+    .offer p {
+      color: #b7c2d0;
+      max-width: 650px;
+      margin: auto;
+    }
+    .price {
+      font-size: 44px;
+      font-weight: 900;
+      margin: 25px 0 5px;
+      color: #25d366;
+    }
+    .price-note {
+      color: #8e9aaa;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .list {
+      max-width: 520px;
+      margin: 25px auto;
+      text-align: left;
+    }
+    .list div {
+      padding: 9px 0;
+      color: #dce4ed;
+    }
+    .faq {
+      max-width: 800px;
+      margin: auto;
+    }
+    details {
+      background: #0d1a2a;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      padding: 18px 20px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
+    details p {
+      color: #aeb9c8;
+      margin-top: 12px;
+    }
+    .final-cta {
+      text-align: center;
+      padding-bottom: 80px;
+    }
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 30px 0;
+      text-align: center;
+      color: #7f8b9b;
+      font-size: 14px;
+    }
+    @media (max-width: 750px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding-top: 55px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .section-title {
+        font-size: 29px;
+      }
+      .offer h2 {
+        font-size: 30px;
+      }
+      .nav-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">Vendeur <span>Digital 360</span></div>
+    <a href="#offre" class="nav-btn">Découvrir l'offre</a>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="badge">🚀 PROGRAMME DISPONIBLE</div>
+      <h1>
+        Transforme tes compétences en
+        <span>revenus en ligne.</span>
+      </h1>
+      <p>
+        Découvre une méthode simple et structurée pour créer ton activité
+        digitale, trouver tes premiers clients et développer tes ventes sur Internet.
+      </p>
+      <a
+        href="https://monniz.com/p/lien-de-paiement-de-votre-commande"
+        class="cta">
+        Je veux commencer 🚀
+      </a>
+      <a href="#programme" class="secondary">Voir le programme</a>
+    </div>
+  </section>
+  <section id="programme">
+    <div class="container">
+      <h2 class="section-title">Tout ce dont tu as besoin</h2>
+      <p class="section-text">
+        Vendeur Digital 360 t'aide à comprendre les bases essentielles
+        pour construire et développer une activité digitale.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">💡</div>
+          <h3>Trouver ton idée</h3>
+          <p>
+            Identifie une offre digitale intéressante et transforme
+            tes compétences en une véritable proposition commerciale.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h3>Trouver des clients</h3>
+          <p>
+            Découvre comment présenter ton offre et utiliser les
+            réseaux sociaux pour attirer des prospects.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">💰</div>
+          <h3>Développer tes ventes</h3>
+          <p>
+            Mets en place une stratégie simple pour convertir tes
+            prospects et faire évoluer progressivement ton activité.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="section-title">Ce que tu vas apprendre</h2>
+      <p class="section-text">
+        Un parcours pratique pour passer de l'idée à une activité digitale structurée.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Présence en ligne</h3>
+          <p>
+            Construis une présence professionnelle qui inspire confiance
+            et donne envie de découvrir ton offre.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">🛒</div>
+          <h3>Création d'offre</h3>
+          <p>
+            Apprends à structurer une offre claire, compréhensible
+            et adaptée aux besoins de tes clients.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>Stratégie de croissance</h3>
+          <p>
+            Mets progressivement en place des actions pour améliorer
+            ta visibilité et tes résultats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="offre">
+    <div class="container">
+      <div class="offer">
+        <div class="badge">🔥 VENDEUR DIGITAL 360</div>
+        <h2>Prêt à passer à l'action ?</h2>
+        <p>
+          Accède à ton parcours et commence à construire ton activité
+          digitale étape par étape.
+        </p>
+        <div class="list">
+          <div>✅ Méthode structurée</div>
+          <div>✅ Création et présentation de ton offre</div>
+          <div>✅ Stratégie de recherche de clients</div>
+          <div>✅ Techniques de vente en ligne</div>
+          <div>✅ Conseils pour développer ton activité</div>
+        </div>
+        <div class="price">15 000 FCFA</div>
+        <div class="price-note">
+          Paiement sécurisé via Monniz.
+        </div>
+        <a
+          href="https://monniz.com/p/lien-de-paiement-de-votre-commande"
+          class="cta">
+          🛒 Acheter maintenant — 15 000 FCFA
+        </a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq">
+        <details>
+          <summary>À qui s'adresse Vendeur Digital 360 ?</summary>
+          <p>
+            À toute personne qui souhaite apprendre à développer
+            une activité et vendre des services ou produits en ligne.
+          </p>
+        </details>
+        <details>
+          <summary>Ai-je besoin d'être expert en informatique ?</summary>
+          <p>
+            Non. Le parcours est pensé pour être accessible aux débutants
+            et avancer étape par étape.
+          </p>
+        </details>
+        <details>
+          <summary>Comment effectuer mon paiement ?</summary>
+          <p>
+            Clique sur le bouton « Acheter maintenant ». Tu seras redirigé
+            vers la page de paiement Monniz afin de finaliser ta commande.
+          </p>
+        </details>
+        <details>
+          <summary>Comment obtenir plus d'informations ?</summary>
+          <p>
+            Utilise le bouton de contact ci-dessous pour demander
+            les informations concernant le programme.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="final-cta">
+    <div class="container">
+      <h2 class="section-title">Ne reste pas spectateur.</h2>
+      <p class="section-text">
+        Commence maintenant à construire ton activité digitale
+        et passe à l'action.
+      </p>
+      <a
+        class="cta"
+        href="https://wa.me/"
+        target="_blank">
+        💬 Me contacter sur WhatsApp
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    © 2026 Vendeur Digital 360 — Tous droits réservés.
+  </div>
+</footer>
+</body>
+</html>
