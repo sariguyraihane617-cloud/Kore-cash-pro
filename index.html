@@ -1,411 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vendeur Digital 360 — Apprends à créer, vendre et développer ton activité digitale.">
-  <title>Vendeur Digital 360</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #07111f;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-    }
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: auto;
-    }
-    header {
-      padding: 22px 0;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      background: rgba(7,17,31,.95);
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 21px;
-      font-weight: 800;
-    }
-    .logo span {
-      color: #25d366;
-    }
-    .nav-btn {
-      color: white;
-      border: 1px solid rgba(255,255,255,.2);
-      padding: 9px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-    }
-    .hero {
-      padding: 75px 0 60px;
-      text-align: center;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(37,211,102,.12);
-      color: #25d366;
-      padding: 8px 15px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: clamp(38px, 8vw, 70px);
-      line-height: 1.05;
-      max-width: 900px;
-      margin: auto;
-      font-weight: 900;
-    }
-    h1 span {
-      color: #25d366;
-    }
-    .hero p {
-      max-width: 720px;
-      margin: 25px auto;
-      color: #b8c4d3;
-      font-size: 18px;
-    }
-    .cta {
-      display: inline-block;
-      background: #25d366;
-      color: #06110a;
-      font-weight: 800;
-      padding: 16px 28px;
-      border-radius: 12px;
-      margin-top: 12px;
-      font-size: 17px;
-      transition: .2s;
-    }
-    .cta:hover {
-      transform: translateY(-2px);
-    }
-    .secondary {
-      display: inline-block;
-      color: white;
-      border: 1px solid rgba(255,255,255,.18);
-      padding: 15px 25px;
-      border-radius: 12px;
-      margin: 12px 5px 0;
-    }
-    section {
-      padding: 65px 0;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-    .section-text {
-      text-align: center;
-      color: #aeb9c8;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .card {
-      background: #0d1a2a;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 18px;
-      padding: 28px;
-    }
-    .icon {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-    .card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-    .card p {
-      color: #aeb9c8;
-    }
-    .offer {
-      background: linear-gradient(135deg, #0d1f31, #0b1726);
-      border: 1px solid rgba(37,211,102,.2);
-      border-radius: 25px;
-      padding: 45px 25px;
-      text-align: center;
-      max-width: 850px;
-      margin: auto;
-    }
-    .offer h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-    .offer p {
-      color: #b7c2d0;
-      max-width: 650px;
-      margin: auto;
-    }
-    .price {
-      font-size: 44px;
-      font-weight: 900;
-      margin: 25px 0 5px;
-      color: #25d366;
-    }
-    .price-note {
-      color: #8e9aaa;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-    .list {
-      max-width: 520px;
-      margin: 25px auto;
-      text-align: left;
-    }
-    .list div {
-      padding: 9px 0;
-      color: #dce4ed;
-    }
-    .faq {
-      max-width: 800px;
-      margin: auto;
-    }
-    details {
-      background: #0d1a2a;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 12px;
-      margin-bottom: 12px;
-      padding: 18px 20px;
-    }
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-    }
-    details p {
-      color: #aeb9c8;
-      margin-top: 12px;
-    }
-    .final-cta {
-      text-align: center;
-      padding-bottom: 80px;
-    }
-    footer {
-      border-top: 1px solid rgba(255,255,255,.08);
-      padding: 30px 0;
-      text-align: center;
-      color: #7f8b9b;
-      font-size: 14px;
-    }
-    @media (max-width: 750px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
-      .hero {
-        padding-top: 55px;
-      }
-      .hero p {
-        font-size: 16px;
-      }
-      .section-title {
-        font-size: 29px;
-      }
-      .offer h2 {
-        font-size: 30px;
-      }
-      .nav-btn {
-        display: none;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vendeur Digital 360 — le guide pratique pour créer, lancer et vendre une activité digitale.">
+<meta name="theme-color" content="#07111f">
+<title>Vendeur Digital 360° | Crée. Lance. Vends.</title>
+<style>
+:root{--bg:#07111f;--bg2:#0c1b2f;--card:#10233b;--text:#f7f9fc;--muted:#aebbd0;--accent:#f5b83d;--line:rgba(255,255,255,.1);--shadow:0 20px 60px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#091727 55%,#07111f);color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900}.logo span{color:var(--accent)}.nav-btn{padding:10px 16px;border:1px solid rgba(245,184,61,.45);border-radius:999px;color:var(--accent);font-weight:800}
+.hero{padding:76px 0 60px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}.badge,.kicker{color:var(--accent);font-weight:900;font-size:13px;letter-spacing:1.4px;text-transform:uppercase}.badge{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(245,184,61,.12);border:1px solid rgba(245,184,61,.28)}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-2.5px;margin:18px 0}h1 span{color:var(--accent)}h2{font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-1px;margin:9px 0 12px}.lead{font-size:20px;color:#d9e1ed;max-width:720px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin:28px 0}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:13px;font-weight:900}.primary{background:var(--accent);color:#101722}.secondary{border:1px solid var(--line);background:rgba(255,255,255,.03)}.small{font-size:13px;color:var(--muted)}
+.hero-card,.card,.offer-box{background:rgba(16,35,59,.8);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.hero-card{padding:24px}.cover{aspect-ratio:4/5;border-radius:18px;background:linear-gradient(145deg,#162f4d,#0a1728);padding:28px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line)}.cover-top{font-size:12px;font-weight:900;color:var(--accent);letter-spacing:2px}.cover-title{font-size:40px;line-height:1.03;font-weight:950}.cover-bottom{font-size:14px;color:var(--muted)}
+section{padding:72px 0}.section-head{max-width:760px;margin-bottom:32px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px}.icon{font-size:28px}.card h3{margin:8px 0}.card p{margin:0;color:var(--muted)}.flow{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}.pill{padding:13px 17px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;font-weight:800}.arrow{color:var(--accent);font-weight:900}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.product{display:flex;gap:14px;padding:21px;border-radius:18px;background:var(--card);border:1px solid var(--line)}.check{color:var(--accent);font-weight:900;font-size:20px}
+.offer-box{text-align:center;padding:44px;border-color:rgba(245,184,61,.35);background:linear-gradient(135deg,#142d4b,#0c1b2f)}.old{text-decoration:line-through;color:var(--muted)}.price{font-size:58px;font-weight:950;color:var(--accent);line-height:1;margin:10px 0 14px}.note{background:rgba(255,255,255,.035);border:1px solid var(--line);padding:18px;border-radius:15px;color:var(--muted)}.faq{max-width:850px;margin:auto}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;background:none;border:0;color:var(--text);font:inherit;font-weight:850;text-align:left;padding:20px 0;display:flex;justify-content:space-between;cursor:pointer}.faq-a{display:none;color:var(--muted);padding:0 0 20px}.faq-item.open .faq-a{display:block}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}
+@media(max-width:820px){.hero{padding-top:48px}.hero-grid{grid-template-columns:1fr}.grid,.products{grid-template-columns:1fr}.offer-box{padding:30px 20px}.price{font-size:50px}}
+</style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <div class="logo">Vendeur <span>Digital 360</span></div>
-    <a href="#offre" class="nav-btn">Découvrir l'offre</a>
-  </div>
+<nav><div class="container nav-inner"><a class="logo" href="#">VENDEUR <span>DIGITAL 360°</span></a><a class="nav-btn" href="#acheter">15 000 FCFA</a></div></nav>
+
+<header class="hero">
+<div class="container hero-grid">
+<div>
+<div class="badge">📱 GUIDE DIGITAL PRATIQUE</div>
+<h1>Crée.<br><span>Lance.</span><br>Vends.</h1>
+<p class="lead"><strong>Vendeur Digital 360°</strong> t'aide à structurer ton offre, ta page de vente, ton acquisition, tes conversations commerciales et ton parcours client.</p>
+<div class="actions"><a class="btn primary" href="#acheter">🛒 OBTENIR LE GUIDE — 15 000 FCFA</a><a class="btn secondary" href="#contenu">Découvrir le contenu</a></div>
+<p class="small">Produit numérique • Accès après confirmation du paiement.</p>
+</div>
+<div class="hero-card"><div class="cover"><div class="cover-top">VENDEUR DIGITAL 360°</div><div><div class="cover-title">Ton système de vente, étape par étape.</div><p class="cover-bottom">Offre • Contenu • WhatsApp • Acquisition • Conversion • Livraison</p></div><div class="cover-bottom">Guide + exercices + check-lists + modèles</div></div></div>
+</div>
 </header>
-<main>
-  <section class="hero">
-    <div class="container">
-      <div class="badge">🚀 PROGRAMME DISPONIBLE</div>
-      <h1>
-        Transforme tes compétences en
-        <span>revenus en ligne.</span>
-      </h1>
-      <p>
-        Découvre une méthode simple et structurée pour créer ton activité
-        digitale, trouver tes premiers clients et développer tes ventes sur Internet.
-      </p>
-      <a
-        href="https://monniz.com/p/lien-de-paiement-de-votre-commande"
-        class="cta">
-        Je veux commencer 🚀
-      </a>
-      <a href="#programme" class="secondary">Voir le programme</a>
-    </div>
-  </section>
-  <section id="programme">
-    <div class="container">
-      <h2 class="section-title">Tout ce dont tu as besoin</h2>
-      <p class="section-text">
-        Vendeur Digital 360 t'aide à comprendre les bases essentielles
-        pour construire et développer une activité digitale.
-      </p>
-      <div class="cards">
-        <div class="card">
-          <div class="icon">💡</div>
-          <h3>Trouver ton idée</h3>
-          <p>
-            Identifie une offre digitale intéressante et transforme
-            tes compétences en une véritable proposition commerciale.
-          </p>
-        </div>
-        <div class="card">
-          <div class="icon">🎯</div>
-          <h3>Trouver des clients</h3>
-          <p>
-            Découvre comment présenter ton offre et utiliser les
-            réseaux sociaux pour attirer des prospects.
-          </p>
-        </div>
-        <div class="card">
-          <div class="icon">💰</div>
-          <h3>Développer tes ventes</h3>
-          <p>
-            Mets en place une stratégie simple pour convertir tes
-            prospects et faire évoluer progressivement ton activité.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <h2 class="section-title">Ce que tu vas apprendre</h2>
-      <p class="section-text">
-        Un parcours pratique pour passer de l'idée à une activité digitale structurée.
-      </p>
-      <div class="cards">
-        <div class="card">
-          <div class="icon">📱</div>
-          <h3>Présence en ligne</h3>
-          <p>
-            Construis une présence professionnelle qui inspire confiance
-            et donne envie de découvrir ton offre.
-          </p>
-        </div>
-        <div class="card">
-          <div class="icon">🛒</div>
-          <h3>Création d'offre</h3>
-          <p>
-            Apprends à structurer une offre claire, compréhensible
-            et adaptée aux besoins de tes clients.
-          </p>
-        </div>
-        <div class="card">
-          <div class="icon">📈</div>
-          <h3>Stratégie de croissance</h3>
-          <p>
-            Mets progressivement en place des actions pour améliorer
-            ta visibilité et tes résultats.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="offre">
-    <div class="container">
-      <div class="offer">
-        <div class="badge">🔥 VENDEUR DIGITAL 360</div>
-        <h2>Prêt à passer à l'action ?</h2>
-        <p>
-          Accède à ton parcours et commence à construire ton activité
-          digitale étape par étape.
-        </p>
-        <div class="list">
-          <div>✅ Méthode structurée</div>
-          <div>✅ Création et présentation de ton offre</div>
-          <div>✅ Stratégie de recherche de clients</div>
-          <div>✅ Techniques de vente en ligne</div>
-          <div>✅ Conseils pour développer ton activité</div>
-        </div>
-        <div class="price">15 000 FCFA</div>
-        <div class="price-note">
-          Paiement sécurisé via Monniz.
-        </div>
-        <a
-          href="https://monniz.com/p/lien-de-paiement-de-votre-commande"
-          class="cta">
-          🛒 Acheter maintenant — 15 000 FCFA
-        </a>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <h2 class="section-title">Questions fréquentes</h2>
-      <div class="faq">
-        <details>
-          <summary>À qui s'adresse Vendeur Digital 360 ?</summary>
-          <p>
-            À toute personne qui souhaite apprendre à développer
-            une activité et vendre des services ou produits en ligne.
-          </p>
-        </details>
-        <details>
-          <summary>Ai-je besoin d'être expert en informatique ?</summary>
-          <p>
-            Non. Le parcours est pensé pour être accessible aux débutants
-            et avancer étape par étape.
-          </p>
-        </details>
-        <details>
-          <summary>Comment effectuer mon paiement ?</summary>
-          <p>
-            Clique sur le bouton « Acheter maintenant ». Tu seras redirigé
-            vers la page de paiement Monniz afin de finaliser ta commande.
-          </p>
-        </details>
-        <details>
-          <summary>Comment obtenir plus d'informations ?</summary>
-          <p>
-            Utilise le bouton de contact ci-dessous pour demander
-            les informations concernant le programme.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="final-cta">
-    <div class="container">
-      <h2 class="section-title">Ne reste pas spectateur.</h2>
-      <p class="section-text">
-        Commence maintenant à construire ton activité digitale
-        et passe à l'action.
-      </p>
-      <a
-        class="cta"
-        href="https://wa.me/"
-        target="_blank">
-        💬 Me contacter sur WhatsApp
-      </a>
-    </div>
-  </section>
-</main>
-<footer>
-  <div class="container">
-    © 2026 Vendeur Digital 360 — Tous droits réservés.
-  </div>
-</footer>
+
+<section><div class="container"><div class="section-head"><div class="kicker">Le problème</div><h2>Tu n'as pas forcément besoin de plus d'outils. Tu as besoin d'un système.</h2><p class="lead">Le guide t'aide à relier les différentes pièces d'une petite activité digitale.</p></div><div class="grid">
+<div class="card"><div class="icon">🎯</div><h3>Clarifier</h3><p>Définir une cible, un problème et une offre compréhensible.</p></div>
+<div class="card"><div class="icon">💬</div><h3>Convertir</h3><p>Structurer tes messages, tes objections et ton suivi commercial.</p></div>
+<div class="card"><div class="icon">🚀</div><h3>Développer</h3><p>Publier, mesurer et améliorer progressivement ton système.</p></div>
+</div></div></section>
+
+<section><div class="container"><div class="section-head"><div class="kicker">Le parcours</div><h2>Une méthode simple en 5 étapes.</h2></div><div class="flow"><span class="pill">🎥 ATTIRER</span><span class="arrow">→</span><span class="pill">💡 INTÉRESSER</span><span class="arrow">→</span><span class="pill">🤝 RASSURER</span><span class="arrow">→</span><span class="pill">🛒 CONVERTIR</span><span class="arrow">→</span><span class="pill">❤️ FIDÉLISER</span></div></div></section>
+
+<section id="contenu"><div class="container"><div class="section-head"><div class="kicker">Ce que tu reçois</div><h2>Un guide conçu pour être appliqué.</h2><p class="lead">Le produit comprend un guide pratique, des exercices, des check-lists et des modèles directement adaptables.</p></div><div class="products">
+<div class="product"><div class="check">✓</div><div><strong>Guide principal</strong><p class="small">Positionnement, offre, page de vente, acquisition, conversion, paiement, livraison et développement.</p></div></div>
+<div class="product"><div class="check">✓</div><div><strong>Workbook</strong><p class="small">Fiches pour définir ton client idéal, ton offre et ton plan d'action.</p></div></div>
+<div class="product"><div class="check">✓</div><div><strong>Check-lists</strong><p class="small">Publication, paiement, livraison et vérification du parcours client.</p></div></div>
+<div class="product"><div class="check">✓</div><div><strong>Modèles prêts à adapter</strong><p class="small">Posts, messages après intérêt, relances, demandes de témoignage et calendrier d'action.</p></div></div>
+</div></div></section>
+
+<section><div class="container"><div class="section-head"><div class="kicker">Pour qui ?</div><h2>Pour celles et ceux qui veulent vendre en ligne avec une méthode claire.</h2></div><div class="grid">
+<div class="card"><div class="icon">🛍️</div><h3>Vendeurs</h3><p>Produits physiques ou numériques.</p></div>
+<div class="card"><div class="icon">🧑‍💻</div><h3>Prestataires</h3><p>Services, freelances et petites activités.</p></div>
+<div class="card"><div class="icon">🌱</div><h3>Débutants</h3><p>Personnes qui veulent structurer leur présence digitale progressivement.</p></div>
+</div></div></section>
+
+<section id="acheter"><div class="container"><div class="offer-box">
+<div class="kicker">OFFRE Vendeur Digital 360°</div><h2>Construis les bases de ton système de vente digital.</h2>
+<p class="old">Prix : 15 000 FCFA</p><div class="price">15 000 FCFA</div>
+<p>Guide pratique + exercices + check-lists + modèles.</p>
+<a class="btn primary" href="https://my.moneyfusion.net/6a93f371a7bdcfa6208e94b4">💳 PAYER ET ACCÉDER À VENDEUR DIGITAL 360°</a>
+<p class="small" style="margin-top:16px">Paiement sécurisé via Money Fusion. Le client est redirigé selon la configuration du lien de paiement.</p>
+</div></div></section>
+
+<section><div class="container faq"><div class="section-head"><div class="kicker">FAQ</div><h2>Questions fréquentes</h2></div>
+<div class="faq-item"><button class="faq-q">Est-ce adapté aux débutants ? <span>+</span></button><div class="faq-a">Oui. Le guide est conçu pour être suivi progressivement avec des exercices et des livrables.</div></div>
+<div class="faq-item"><button class="faq-q">Ai-je besoin d'un ordinateur ? <span>+</span></button><div class="faq-a">Non. Une grande partie du parcours peut être consultée et appliquée depuis un smartphone.</div></div>
+<div class="faq-item"><button class="faq-q">Est-ce que des revenus sont garantis ? <span>+</span></button><div class="faq-a">Non. Le guide fournit une méthode et des outils. Les résultats dépendent notamment de l'offre, du marché et de la mise en pratique.</div></div>
+<div class="faq-item"><button class="faq-q">Comment vais-je recevoir le produit ? <span>+</span></button><div class="faq-a">Après confirmation du paiement, tu accèdes à la page de livraison prévue pour les acheteurs.</div></div>
+</div></section>
+
+<section><div class="container"><div class="note"><strong>⚠️ Transparence :</strong> Vendeur Digital 360° n'est pas une promesse de richesse rapide. Il s'agit d'un parcours pratique destiné à aider à structurer une activité digitale et un système de vente.</div></div></section>
+
+<footer><div class="container">© 2026 Vendeur Digital 360° — Tous droits réservés.</div></footer>
+<script>
+document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{const item=btn.parentElement;item.classList.toggle('open');btn.querySelector('span').textContent=item.classList.contains('open')?'−':'+';}));
+</script>
 </body>
 </html>
